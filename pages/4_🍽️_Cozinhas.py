@@ -102,6 +102,10 @@ country_select = st.sidebar.multiselect('Escolha os países que deseja visualiza
                                         default = ['Brazil','England', 'Qatar', 'South Africa', 'Canada', 'Australia']
                                         )
 
+if not country_select:
+    st.warning("⚠️ Nenhum país selecionado! Por favor, selecione ao menos um país para visualizar as informações.")
+    st.stop()
+
 df1 = df1[df1['Country'].isin(country_select)]
 
 count_restaurant_select = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja visualizar', 1, 20, value=10)
@@ -119,11 +123,6 @@ df1 = df1[df1['Cuisines'].isin(cuisine_select)]
 st.header('🍽️ Visão Cozinhas')
 st.markdown('''___''')
 st.subheader('Melhores restaurantes dos principais tipos culinários')
-
-cols = ['Cuisines', 'Aggregate_rating','Restaurant_Name']
-df_aux = df1.loc[:, cols].groupby(['Cuisines','Restaurant_Name']).mean().round(2).sort_values('Aggregate_rating', ascending = False).reset_index()
-df_aux = df_aux.iloc[0:5]
-
 
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric('North Indian: Indian Grill Room', '4.9/5.0', help='Restaurante: Indian Grill Room' f'\n\nPaís: India'f'\n\nCidade: Gurgaon' f'\n\nMédia prato pra 2: R$108.0')
