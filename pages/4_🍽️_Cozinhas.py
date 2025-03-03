@@ -103,7 +103,7 @@ country_select = st.sidebar.multiselect('Escolha os países que deseja visualiza
                                         )
 
 
-#df1 = df1[df1['Country'].isin(country_select)]
+df1 = df1[df1['Country'].isin(country_select)]
 
 count_restaurant_select = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja visualizar', 1, 20, value=10)
 cuisine_select = st.sidebar.multiselect('Escolha os tipos de culinária', 
@@ -111,18 +111,7 @@ cuisine_select = st.sidebar.multiselect('Escolha os tipos de culinária',
                                         default = ['Brazilian', 'Japanese','Italian', 'French', 'Pizza']
                                         )
 
-#df1 = df1[df1['Cuisines'].isin(cuisine_select)]
-
-
-if not country_select:
-    country_select = df1['Country'].unique()  # Exibe todos os países se não houver filtro
-if not cuisine_select:
-    cuisine_select = df1['Cuisines'].unique()  # Exibe todos os tipos de culinária se não houver filtro
-
-# Aplicando os filtros no dataframe
-df1 = df1[df1['Country'].isin(country_select) & df1['Cuisines'].isin(cuisine_select)]
-
-
+df1 = df1[df1['Cuisines'].isin(cuisine_select)]
 
 #================================================================
 # Layout no Streamlit
