@@ -115,7 +115,7 @@ df1 = df1[df1['Cuisines'].isin(cuisine_select)]
 # Layout no Streamlit
 #================================================================
 
-st.header('🍽️ Visão Tipos Culinários')
+st.header('🍽️ Visão Cozinhas')
 st.markdown('''___''')
 st.subheader('Melhores restaurantes dos principais tipos culinários')
 
