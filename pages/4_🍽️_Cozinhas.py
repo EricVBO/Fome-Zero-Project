@@ -110,10 +110,9 @@ cuisine_select = st.sidebar.multiselect('Escolha os tipos de culinária',
                                         df1['Cuisines'].unique(),
                                         default = ['Brazilian', 'Japanese','Italian', 'French', 'Pizza']
                                         )
-if cuisine_select:
-    df1 = df1[df1['Cuisines'].isin(cuisine_select)]
-else:
-    st.error('Nenhum filtro selecionado')
+
+df1 = df1[df1['Cuisines'].isin(cuisine_select)]
+
 #================================================================
 # Layout no Streamlit
 #================================================================
