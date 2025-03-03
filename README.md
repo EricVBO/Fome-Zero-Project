@@ -44,7 +44,7 @@ O resultado do projeto foi um dashboard interativo desenvolvido com Streamlit, o
 2. Gráficos dinâmicos para comparação entre países, cidades e tipos de culinária
 3. Tabelas exploratórias para análise detalhada dos dados
 
-        📌 Link do Dashboard: (Caso tenha hospedado em alguma plataforma, inserir o link aqui)
+📌 Link do Dashboard: https://ericvbo-project-fome-zero.streamlit.app
 
 ## 📌 6. Conclusão
 O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam as métricas de forma clara e objetiva para o CEO.
