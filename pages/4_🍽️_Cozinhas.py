@@ -102,7 +102,6 @@ country_select = st.sidebar.multiselect('Escolha os países que deseja visualiza
                                         default = ['Brazil','England', 'Qatar', 'South Africa', 'Canada', 'Australia']
                                         )
 
-
 df1 = df1[df1['Country'].isin(country_select)]
 
 count_restaurant_select = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja visualizar', 1, 20, value=10)
